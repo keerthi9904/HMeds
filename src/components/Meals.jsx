@@ -12,11 +12,11 @@ export default function Meals() {
   } = useHttp('http://localhost:3000/meals', requestConfig, []);
 
   if (isLoading) {
-    return <p className="center">Fetching meals...</p>;
+    return <p className="center">Fetching medicines...</p>;
   }
 
   if (error) {
-    return <Error title="Failed to fetch meals" message={error} />;
+    return <Error title="Failed to fetch medicines" message={error} />;
   }
 
   // if (!data) {
