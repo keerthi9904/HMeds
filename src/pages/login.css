@@ -2,7 +2,7 @@
 
 /* General Page Styling */
 .homepage {
-    background: url('../public/food-bg.jpg') no-repeat center center /cover;
+    background: url('../public/bg.jpg') no-repeat center center /cover;
     position: relative;
     text-align: center;
     height: 100vh;
@@ -21,10 +21,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
-    backdrop-filter: blur(3px); /* Blur effect */
-    z-index: 1;
-    }
+    background: rgba(0, 0, 0, 0.3); /*Dark transparent overlay */
+    /* backdrop-filter: blur(1px); /*Blur effect */
+    z-index: 1; 
+     } 
       
     /* Header section */
     .header {  
@@ -66,41 +66,12 @@
     cursor: pointer;
     }
     
-    /* .signup-button, .login-button {  
-    background-color: yellow;
-    color: black;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    } */
-    
-    .signup-button:hover, .login-button:hover {  
-    background-color: #ffcc00;
-    z-index: 3;
-    }
     /* Header section end */
-    
-    /* Hero Section */
-    /* .hero {
-    display: flex;
-    top: 30%;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    align-items: center;
-    padding: 120px 20px;
-    } */
-    
+        
     .hero {
     /* padding-top: 100px; */
     position: relative;
-    top: 25%;
+    top: 27%;
     left: 27%;
     transform: translate(-50%, -50%); 
     text-align: center;
@@ -143,14 +114,10 @@
     transition: 0.3s;
     }
     
-    .menu-button:hover {
-    background-color: #ffcc00;
-    }
-    
     /* Features Section */
     .features {
     position: relative;
-    top: 12%;
+    top: 14%;
     bottom: 0%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -191,8 +158,8 @@
     /* Footer */
     .footer {
     position: relative;
-    margin-top: 80px;
-    /* top: 10%; */
+    margin-top: 85px;
+    top: 2%;
     width: 100%;
     }
         
@@ -203,13 +170,13 @@
     }
     
     .hero h1 span {
-    color: #ffcc00;
+    color: #2e7933;
     }
     
     .menu-button {
     padding: 12px 20px;
     font-size: 18px;
-    background-color: #ff6600;
+    background-color: #28a745;
     border: none;
     color: white;
     border-radius: 8px;
@@ -218,7 +185,7 @@
     }
     
     .menu-button:hover {
-    background-color: #e65c00;
+    background-color: #218838;
     
     }
     

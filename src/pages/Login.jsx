@@ -10,7 +10,7 @@ function Login() {
         <div className="homepage">
             <header className="header">  
             <div className="logo-container">
-                <img src={logo} alt="ReactFood Logo" className="logo" />
+                <img src={logo} alt="HMeds Logo" className="logo" />
                 </div>
                 <div className="header-links">
                 <span className="app-text">Get the App</span> 
@@ -20,10 +20,10 @@ function Login() {
             </header>
             {/* Hero Section */}
             <section className="hero">
-                <h1>Welcome to <span>ReactFood</span></h1>
-                <p>Discover delicious meals & order with ease!</p>
+                <h1>Welcome to <span>HMeds</span></h1>
+                <p>Get the medicines & healthcare essentials you need with ease!</p>
                 <button onClick={() => navigate("/main")} className="menu-button">
-                    Go to Menu 🍽️
+                    Go to Store 🏥 
                 </button>
             </section>
 
@@ -32,12 +32,12 @@ function Login() {
                 <h2>Why Choose Us?</h2>
                 <div className="feature-cards">
                     <div className="feature-card">
-                        <h3>🌿 Fresh Ingredients</h3>
-                        <p>Only the best quality ingredients for a flavorful experience.</p>
+                        <h3>💊 Genuine Medicines</h3>
+                        <p>Only certified and high-quality medicines from trusted sources.</p>
                     </div>
                     <div className="feature-card">
-                        <h3>⚡ Fast Delivery</h3>
-                        <p>Hot and fresh meals delivered to your doorstep.</p>
+                        <h3>🚀 Quick Delivery</h3>
+                        <p>Your medicines delivered safely to your doorstep on time.</p>
                     </div>
                     <div className="feature-card">
                         <h3>🔒 Secure Payments</h3>
@@ -48,7 +48,7 @@ function Login() {
 
             {/* Footer */}
             <footer className="footer">
-                <p>&copy; 2025 ReactFood | All Rights Reserved</p>
+                <p>&copy; 2025 HMeds | All Rights Reserved</p>
             </footer>
         </div>
     );
