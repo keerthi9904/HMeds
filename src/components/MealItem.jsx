@@ -1,11 +1,11 @@
 import { useState, useContext } from 'react';
-import CartPopup from "./CartPopup.jsx";
+// import CartPopup from "./CartPopup.jsx";
 import { currencyFormatter } from '../util/formatting.js';
 import Button from './UI/Button.jsx';
 import CartContext from '../store/CartContext.jsx';
 
 export default function MealItem({ meal }) {
-  const [popup, setPopup] = useState(false);
+  // const [popup, setPopup] = useState(false);
   const cartCtx = useContext(CartContext);
 
   const cartItem = cartCtx.items.find(item => item.id === meal.id);
@@ -14,8 +14,8 @@ export default function MealItem({ meal }) {
   function handleAddMealToCart() {
     cartCtx.addItem(meal);
     console.log(`${meal.name} added to cart`);
-    setPopup(true);
-    setTimeout(() => { setPopup(false); }, 2000);
+    // setPopup(true);
+    // setTimeout(() => { setPopup(false); }, 2000);
   }
 
   function handleRemoveMealFromCart() {
@@ -47,7 +47,7 @@ export default function MealItem({ meal }) {
             <Button onClick={handleAddMealToCart}>Add to Cart</Button>
           )}
         </p>
-        {popup && <CartPopup message="Item added to cart!" onClose={() => setPopup(false)} />}
+        {/* {popup && <CartPopup message="Item added to cart!" onClose={() => setPopup(false)} />} */}
       </article>
     </li>
   );

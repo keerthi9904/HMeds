@@ -19,15 +19,32 @@ export default function Meals() {
     return <Error title="Failed to fetch medicines" message={error} />;
   }
 
-  // if (!data) {
-  //   return <p>No meals found.</p>
-  // }
+  // return (
+  //   <ul id="meals">
+  //     {loadedMeals.map((meal) => (
+  //       <MealItem key={meal.id} meal={meal} />
+  //     ))}
+  //   </ul>
+  // );
+  // Group medicines by category
+  const categorizedMeals = loadedMeals.reduce((acc, meal) => {
+    acc[meal.category] = acc[meal.category] || [];
+    acc[meal.category].push(meal);
+    return acc;
+  }, {});
 
   return (
-    <ul id="meals">
-      {loadedMeals.map((meal) => (
-        <MealItem key={meal.id} meal={meal} />
+    <div>
+      {Object.entries(categorizedMeals).map(([category, meals]) => (
+        <div key={category} className="category-section">
+          <h2 className="category-title">{category}</h2>
+          <ul className="meals-list">
+            {meals.map((meal) => (
+              <MealItem key={meal.id} meal={meal} />
+            ))}
+          </ul>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }

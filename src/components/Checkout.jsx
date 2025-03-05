@@ -99,12 +99,12 @@ export default function Checkout() {
         <h2>Checkout</h2>
         <p>Total Amount: {currencyFormatter.format(cartTotal)}</p>
 
-        <Input label="Full Name" type="text" id="name" />
-        <Input label="E-Mail Address" type="email" id="email" />
-        <Input label="Street" type="text" id="street" />
+        <Input label={<span>Full Name <span style={{ color: 'red' }}>*</span></span>} type="text" id="name" required={true}/>
+        <Input label={<span>E-Mail Address <span style={{ color: 'red' }}>*</span></span>} type="email" id="email" />
+        <Input label={<span>Street <span style={{ color: 'red' }}>*</span></span>} type="text" id="street" />
         <div className="control-row">
-          <Input label="Postal Code" type="text" id="postal-code" />
-          <Input label="City" type="text" id="city" />
+          <Input label={<span>Postal Code <span style={{ color: 'red' }}>*</span></span>} type="text" id="postal-code" />
+          <Input label={<span>City <span style={{ color: 'red' }}>*</span></span>} type="text" id="city" />
         </div>
 
         {error && <Error title="Failed to submit order" message={error} />}
